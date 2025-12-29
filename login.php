@@ -10,7 +10,7 @@ ini_set('session.use_only_cookies', 1);
 session_start();
 
 // Include database connection
-require_once 'config/database.php';
+require_once 'database.php';
 
 // Initialize variables
 $email = '';
@@ -238,7 +238,7 @@ function get_base_url() {
     <title>Login - MediFlow Clinic</title>
     
     <!-- Login Page CSS -->
-    <link rel="stylesheet" href="CSS/login.css">
+    <link rel="stylesheet" href="login.css">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -457,4 +457,5 @@ function get_base_url() {
     </script>
 </body>
 </html>
+
 <?php ob_end_flush(); ?>
