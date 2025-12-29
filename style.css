@@ -1,0 +1,1272 @@
+/* making the pages responsive */
+/* apply styles when screen is 1024px or less than that  */
+@media (max-width: 1024px) {  
+    /* Sidebar collapses to smaller width */
+    .sidebar {
+        width: 150px;
+        padding: 15px;
+    }
+
+    .sidebar h2 {
+        font-size: 18px;
+    }
+
+    .top-row h1 {
+        font-size: 20px;
+    }
+
+    .btn {
+        padding: 5px 10px;
+        font-size: 14px;
+    }
+
+    .doctors-table th,
+    .doctors-table td {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
+/* apply styles when screen is 768px or less than that  */
+@media (max-width: 768px) {
+    /* Layout switches to vertical */
+    body, .layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+    }
+
+    .sidebar a {
+        flex: 1 0 auto;
+        text-align: center;
+        padding: 10px;
+        margin: 0 5px;
+    }
+
+    .content {
+        padding: 15px;
+    }
+
+    .top-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .top-row button {
+        margin-top: 10px;
+    }
+
+    .doctors-table {
+        font-size: 12px;
+    }
+
+    .btn {
+        padding: 4px 8px;
+        font-size: 12px;
+    }
+}
+/* apply styles when screen is 480px or less than that  */
+@media (max-width: 480px) {
+    /* Small mobile adjustments */
+    .sidebar a {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .top-row h1 {
+        font-size: 18px;
+    }
+
+    .doctors-table th,
+    .doctors-table td {
+        padding: 6px;
+    }
+
+    .btn {
+        padding: 3px 6px;
+        font-size: 11px;
+    }
+}
+
+/* Global Styles for all the pages */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;  
+    background-color: #FFFFFF;
+    justify-content: center;
+}
+
+/* header for all pages */
+
+header {
+    background-color: #0047AB;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+/* main title */
+header h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+/* the nav links  */
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* footer for all pages */
+footer {
+    background-color: #0047AB;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 12px;
+    margin-bottom: 100px;
+
+}
+
+/* footer links */
+footer a {
+    color: white;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+  /* index page */
+
+/* JS for index */
+/* active link styling */
+.active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+/* animation for main section */
+.index-main {
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.index-main.fade-in {
+    opacity: 1;
+}
+
+/* main section */
+.index-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 150px 50px 80px; 
+    background: #f0f2f5;
+    gap: 40px;
+}
+
+.index-main-text {
+    flex: 1;    /* allow text to get the available space to wrap the image */
+    margin-top: 400px;
+}
+
+.index-main-text h2 {
+    font-size: 36px;
+    color: #0047AB;
+    margin-bottom: 20px;
+}
+
+.index-main-text p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.index-main-btn {
+    background-color: #66CC99;
+    color: #0047AB;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.index-main-btn:hover {
+    background-color: #5ebc87;
+}
+
+.index-main-image img {
+    margin-top: 500px;
+    width: 100%;
+    border-radius: 20px;
+     /* Fade-out mask at bottom for good effect */
+    -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+    /* shadow at image borders  */
+        box-shadow: 0 0 35px rgba(0,0,0,0.07);
+         mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+
+}
+
+/*Services Section */
+.services {
+    text-align: center;
+    padding: 80px 50px;
+    background: #ffffff;
+}
+
+.services h2 {
+    font-size: 32px;
+    color: #0047AB;
+    margin-bottom: 50px;
+}
+
+.service-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.service-card {
+    background-color: #f0f2f5;
+    padding: 25px;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.service-card h3 {
+    color: #0047AB;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+
+/* login */
+
+/* Main content to center login form */
+main {
+    flex: 1; /* take remaining space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px; /* space for fixed header */
+}
+
+/* Login Container */
+.login-container {
+    background-color: #FFFFFF;
+    width: 350px;
+    padding: 30px;
+    border-radius: 10px;   /*rounded corners */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    margin-top: 300px;
+    margin-left: 570px;
+    margin-bottom: 55px;
+    
+}
+
+/* Login Title */
+.login-container h2 {
+    color: #0d0db9;
+    margin-bottom: 20px;
+}
+
+/* Labels in the form */
+.login-container label {
+    display: block;
+    text-align: left;
+    color: #333333;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+/* Inputs */
+.login-container input[type="email"],
+.login-container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #333333;
+    border-radius: 5px; /*rounded corners */
+}
+
+/* Checkbox */
+.login-container .remember-me {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.login-container .remember-me input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+.login-container .remember-me label {
+    color: #333333;
+    font-weight: normal;
+}
+
+/* Submit Button */
+.login-container button {
+    width: 100%;
+    padding: 12px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #66CC99;
+    color: #0047AB;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.login-container button:hover {
+    background-color: #5ebc87;
+}
+
+/* Links */
+.login-container .forgot-password a,
+.login-container .register-link a {
+    color: #0047AB;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.login-container .forgot-password a:hover,
+.login-container .register-link a:hover {
+    text-decoration: underline;
+}
+
+.remember-me {
+    display: flex;          
+    align-items: center;  
+    gap: 5px;               
+    margin-bottom: 15px;
+}
+
+.remember-me input {
+    width: 16px;
+    height: 16px;
+}
+/* register page */
+
+/* ===== Main content*/
+main {
+    display: flex;
+    justify-content: center; /* center horizontally */
+    padding-top: 120px;      /* create space so register box is below fixed header */
+    padding-bottom: 50px;
+}
+
+/* ===== Register Container ===== */
+.register-box {
+    background-color: #FFFFFF;
+    width: 400px;
+    padding: 35px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: left;
+    margin-left: 290px ;
+    margin-top: 190px;
+    margin-bottom: 50px;
+    height: 500px;
+}
+
+/* ===== Register Title ===== */
+.register-box h2 {
+    color: #0047AB;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* ===== Labels ===== */
+.register-box label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333333;
+    font-weight: 500;
+}
+
+/* ===== Inputs ===== */
+.register-box input[type="text"],
+.register-box input[type="email"],
+.register-box input[type="tel"],
+.register-box input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #333333;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* ===== Submit Button ===== */
+.register-box .register-button {
+    width: 100%;
+    padding: 12px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #66CC99;
+    color: #0047AB;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.register-box .register-button:hover {
+    background-color: #5ebc87;
+}
+
+/* ===== Links ===== */
+.register-box .login-link a {
+    color: #0047AB;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.register-box .login-link a:hover {
+    text-decoration: underline;
+}
+
+
+ 
+/* Contact Page Layout */
+.contact-container {
+    padding: 150px 40px 60px; /* space under fixed header */
+    max-width: 1000px;
+    margin-top: 20px;
+    margin-bottom: 90px;
+    margin-left: 250px;
+}
+
+/* Page Title */
+.page-title {
+    text-align: center;
+    color: #0047AB;
+    margin: 40px ;
+}
+
+/* Contact Info Section */
+.contact-info {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.08);
+    margin-bottom: 40px;
+    margin-top: 300px;
+}
+
+.contact-info h3 {
+    color: #0047AB;
+    margin-bottom: 5px;
+}
+
+.contact-info p {
+    margin-bottom: 20px;
+    font-size: 15px;
+    color: #333;
+}
+
+/* ===== Contact Form ===== */
+.contact-form {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.08);
+}
+
+.contact-form h3 {
+    color: #0047AB;
+    margin-bottom: 20px;
+}
+
+/* Input Fields */
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 15px;
+    border: 1px solid #333;
+    border-radius: 8px;
+    resize: none;
+    font-size: 15px;
+}
+
+/* Textarea Height */
+.contact-form textarea {
+    height: 120px;
+}
+
+/* Button */
+.contact-form button {
+    width: 100%;
+    padding: 14px;
+    background: #66CC99;
+    color: #0047AB;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    background: #5ebc87;
+}
+
+ /* Booking page */
+/* Booking container */
+.booking-container {
+    width: 80%;
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin-top: 400px;
+}
+
+/* FORM GROUP */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+select,
+input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+}
+
+/* Time slots */
+.time-slot-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));   /*put more than one time slot in the same row */
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.time-slot {
+    background: #e3f1ff;
+    padding: 10px;
+    border-radius: 6px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid #b9ddff;
+    transition: 0.2s;
+}
+
+.time-slot:hover {
+    background: #bfe0ff;
+}
+
+/* confirmation table */
+.confirm-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.confirm-table th {
+    background: #0d0db9;
+    color: white;
+    padding: 10px;
+    text-align: left;
+    width: 150px;
+}
+
+.confirm-table td {
+    background: #f2f7fb;
+    padding: 10px;
+}
+
+/* confirmation button */
+.confirm-btn {
+    margin-top: 25px;
+    background: #0d0db9;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+.confirm-btn:hover {
+    background: #0d0db9;
+}
+
+
+/* my_appointments */
+.appointments-container {
+    max-width: 1000px;
+    margin-top: 170px;
+    margin-left:250px;
+    padding: 0 20px;
+    margin-bottom: 170px;
+
+}
+.appointments-container h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+/* Book Appointment Button */
+.book-btn {
+    display: block;
+    margin: 0 auto 30px;
+    padding: 12px 25px;
+    font-size: 1rem;
+    background-color: #0d0db9;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.book-btn:hover {
+    background-color: #2563eb;
+}
+/* Tabs */
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.tab {
+    padding: 10px 20px;
+    margin: 0 5px;
+    background-color: #e5e7eb;
+    color: #1f2937;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.tab:hover {
+    background-color: #d1d5db;
+}
+
+.tab.active {
+    background-color: #3b82f6;
+    color: #fff;
+}
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: center;
+}
+
+thead {
+    background-color:#0047AB;
+    color: #fff;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f3f4f6;
+}
+
+.action-btn {
+    padding: 5px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: #6b7280;
+    color: #fff;
+    transition: background-color 0.3s;
+}
+
+.action-btn:hover {
+    background-color: #4b5563;
+}
+
+/* Status badges */
+.status {
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-weight: 500;
+    color: #fff;
+    display: inline-block;
+}
+
+.status.confirmed { 
+    background-color: #10b981; 
+}   
+.status.pending { 
+    background-color: #f59e0b; 
+}     
+.status.cancelled { 
+    background-color: #ef4444; 
+}   
+.status.completed { 
+    background-color: #3b82f6; 
+}   
+
+
+
+/* profile */
+.main-header {
+    background: #0a4db3;
+    padding: 20px;
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links a  {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 16px;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+
+.page-title {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 26px;
+}
+
+
+.profile-container {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    padding: 30px;
+}
+
+.profile-box {
+    background: white;
+    padding: 25px;
+    width: 350px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.profile-box h3 {
+    margin-top: 0;
+    color: #0a2d5a;
+}
+
+/* Inputs */
+.profile-box label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.profile-box input {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #c7c7c7;
+    border-radius: 5px;
+    margin-bottom: 12px;
+}
+
+.profile-box input:focus {
+    border-color: #0a4db3;
+    outline: none;
+}
+
+/* Buttons */
+.save-btn,
+.password-btn {
+    width: 70%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-size: 15px;
+}
+
+.save-btn {
+    background: #3cb58c;
+}
+
+.save-btn:hover {
+    background: #2b896a;
+}
+
+.password-btn {
+    background: #0a4db3;
+}
+
+.password-btn:hover {
+    background: #083c88;
+}
+
+/* admin dashboard */
+
+
+/* --- Sidebar --- */
+.sidebar {
+    width: 220px;
+    background:#0047AB ;
+    color: #fff;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    position: fixed;
+}
+
+.sidebar h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+.sidebar a {
+    display: flex;
+    color: #ecf0f1;
+    padding: 10px 0;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.sidebar a:hover {
+    color: #1abc9c;
+}
+
+/* --- Main Content --- */
+main {
+    margin-left: 240px; 
+    padding: 20px;
+    width: calc(100% - 240px);
+        display: block;
+
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+/* --- Sections (tables stacked under each other) --- */
+.section-block {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px; /* space between tables */
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    
+}
+
+/* --- Tables --- */
+.table-box {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.table-box th,
+.table-box td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.table-box th {
+    background: #143e8a;
+    color: white;
+}
+
+.table-box tr:nth-child(even) {
+    background: #f2f2f2;
+}
+.active-link {
+    color: #1abc9c !important;
+    font-weight: bold;
+}
+
+
+
+/* Admin Appointments */
+.layout {
+    display: flex;
+    min-height: 100vh;  /* Minimum height fills the viewport */
+}
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: #143e8a;
+    color: white;
+    padding: 20px 0;
+    transition: max-height 0.3s ease;
+}
+
+.sidebar-title {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px 20px;
+}
+
+.sidebar-item {
+    padding: 15px 20px;
+    cursor: pointer;
+}
+
+.sidebar-active {
+    background-color: #50e3c2;
+    color: black;
+    font-weight: bold;
+}
+
+/* Sidebar toggle label */
+.sidebar-toggle-label {
+    display: none;
+    background-color: #50e3c2;
+    color: black;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 15px;
+}
+
+/* Content */
+.content {
+    flex-grow: 1;
+    padding: 30px;
+}
+
+/* --- Appointments Table --- */
+.appointments-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.appointments-table th,
+.appointments-table td {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+}
+
+/* Status Colors */
+.status {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.confirmed { 
+    background-color: #d1fae5; 
+    color: #065f46; 
+}
+.pending   { 
+    background-color: #fbe8a5; 
+    color: #9c6c1f; 
+}
+.cancelled { 
+    background-color: #fee2e2; 
+    color: #991b1b; }
+
+/* Buttons */
+.btn {
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    color: white;
+}
+
+.cancel { 
+    background-color: #e74c3c; 
+}
+.edit   { 
+    background-color: #2980b9; 
+}
+.confirm { 
+    background-color: #27ae60; 
+}
+
+
+
+/* Admin Doctors */
+/* ---- Layout ---- */
+.layout {
+    display: flex;
+    width: 100%;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 200px;
+    background-color: #143e8a;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar h2 {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    display: block;
+    transition: background 0.2s;
+}
+
+.sidebar a.active, .sidebar a:hover {
+    background-color: #50e3c2;
+    color: black;
+}
+
+/* Main content */
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Header */
+.top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.top-row h1 {
+    font-size: 24px;
+}
+
+/* Buttons */
+.btn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn.add {
+    background-color: #50e3c2;
+    color: white;
+}
+
+.btn.add:hover {
+    background-color: #45c9b0;
+}
+
+.btn.edit {
+    background-color: #4f46e5;
+    color: white;
+    margin-right: 5px;
+}
+
+.btn.edit:hover {
+    background-color: #4338ca;
+}
+
+.btn.delete {
+    background-color: #ef4444;
+    color: white;
+    margin-right: 5px;
+}
+
+.btn.delete:hover {
+    background-color: #b91c1c;
+}
+
+.btn.toggle {
+    background-color: #f59e0b;
+    color: white;
+}
+
+.btn.toggle:hover {
+    background-color: #b45309;
+}
+
+/* Table */
+.doctors-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+.doctors-table th, .doctors-table td {
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.doctors-table th {
+    background-color: #143e8a;
+}
+
+/* Status */
+.status {
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.status.active {
+    background-color: #d1fae5;
+    color: #065f46;
+}
+
+.status.inactive {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+/* Admin patients */
+/* Sidebar */
+.sidebar {
+    width: 200px;
+    background-color: #143e8a;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar h2 {
+    margin-bottom: 20px;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    transition: background 0.2s;
+}
+
+.sidebar a:hover, .sidebar a.active {
+    background-color: #50e3c2;
+    color: black;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: 30px;
+}
+
+.add-btn {
+    padding: 8px 12px;
+    background-color: #50e3c2;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-btn:hover {
+    background-color: #45c9b0;
+}
+
+/* Table */
+.table-container {
+    overflow-x: auto;
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+table {
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color:#0047AB;
+}
+
+.status {
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+}
+.status.active {
+    background-color: #d1fae5;
+    color: #065f46;
+}

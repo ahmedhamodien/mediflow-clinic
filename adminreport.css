@@ -1,0 +1,182 @@
+/* General Page Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f7fa;
+    color: #333;
+}
+
+h1, h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+/* Navbar Styles */
+.dashboard-navbar {
+    background-color: #1f2937; /* Dark gray */
+    padding: 15px 0;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #f9fafb;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: background 0.3s;
+}
+
+.nav-links li a:hover {
+    background-color: #3b82f6; /* Blue hover */
+}
+
+/* Report Section Styles */
+.report-section {
+    max-width: 600px;
+    margin: 30px auto;
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.report-section form {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.date-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.date-group label {
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.date-group input {
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.report-section button {
+    padding: 10px 20px;
+    background-color: #3b82f6;
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.report-section button:hover {
+    background-color: #2563eb;
+}
+
+/* Chart Section Styles */
+.chart {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    max-width: 900px;
+    margin: 20px auto 40px;
+    height: 250px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.bar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50px;
+}
+
+.bar {
+    width: 100%;
+    background-color: #4CAF50;
+    border-radius: 6px 6px 0 0;
+    position: relative;
+    transition: 0.3s;
+}
+
+.bar:hover {
+    background-color: #22c55e;
+}
+
+.bar .value {
+    position: absolute;
+    top: -20px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    width: 100%;
+}
+
+.label {
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+/* Doctor Utilization Bars */
+.chart-for-doctors .bar {
+    background-color: #2196F3;
+}
+
+.chart-for-doctors .bar:hover {
+    background-color: #1976D2;
+}
+
+/* Export Button */
+#export-btn {
+    display: block;
+    margin: 0 auto 50px;
+    padding: 12px 25px;
+    background-color: #3b82f6;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#export-btn:hover {
+    background-color: #2563eb;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .chart {
+        flex-wrap: wrap;
+        height: auto;
+    }
+
+    .bar-container {
+        margin-bottom: 15px;
+    }
+
+    .report-section form {
+        flex-direction: column;
+    }
+}
