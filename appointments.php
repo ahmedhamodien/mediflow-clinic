@@ -96,7 +96,7 @@ if ($filter != 'all') {
     <title>Appointments - MediFlow Clinic</title>
     
     <!-- Appointments Page CSS -->
-    <link rel="stylesheet" href="CSS/adminappointments.css">
+    <link rel="stylesheet" href="adminappointments.css">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -345,9 +345,10 @@ if ($filter != 'all') {
 
     <!-- javascript link-->
     <!-- Appointments Page JavaScript -->
-    <script src="JS/appointments.js"></script>
+    <script src="appointments.js"></script>
     
     <!-- Font Awesome for icons -->
     <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
 </body>
+
 </html>
