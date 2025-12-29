@@ -2,10 +2,11 @@
 session_start();
 
 // Database connection configuration
-$host = 'localhost';
-$username = 'root'; // Change if needed
-$password = ''; 
-$database = 'clinic_system';
+define('DB_HOST', 'interchange.proxy.rlwy.net');
+define('DB_USER', 'root');
+define('DB_PASS', 'tfjmUwdPwmljUBeGyqkIXukwLdJDYnNK');
+define('DB_NAME', 'railway');
+
 
 // Create connection
 $conn = new mysqli($host, $username, $password, $database);
@@ -1289,3 +1290,4 @@ $completed_stmt->close();
 </html>
 
 <?php $conn->close(); ?>
+
