@@ -1,10 +1,5 @@
 <?php
-// ============================================================================
-// DOCTOR DASHBOARD - FIXED VERSION ALIGNED WITH DATABASE
-// ============================================================================
 
-// Start output buffering
-ob_start();
 
 // Enable error display for debugging
 ini_set('display_errors', 1);
@@ -31,10 +26,6 @@ if ($conn->connect_error) {
 
 // Set charset
 $conn->set_charset("utf8mb4");
-
-// ============================================================================
-// SESSION VALIDATION
-// ============================================================================
 
 // Check if user is logged in
 if (!isset($_SESSION['user_id']) || !isset($_SESSION['user_type'])) {
@@ -64,9 +55,7 @@ if ($_SESSION['user_type'] !== 'doctor') {
     }
 }
 
-// ============================================================================
-// DOCTOR VERIFICATION
-// ============================================================================
+
 
 // Get doctor info from database (using your actual database schema)
 $user_sql = "SELECT u.id as user_id, u.first_name, u.last_name, u.email, u.phone, 
@@ -106,9 +95,7 @@ if (!$doctor) {
 if ($doctor && !$doctor_not_found) {
     $doctor_id = $doctor['doctor_id'];
     
-    // ============================================================================
-    // DASHBOARD DATA FETCHING (ALIGNED WITH DATABASE SCHEMA)
-    // ============================================================================
+  
     
     $today = date('Y-m-d');
     
@@ -937,4 +924,5 @@ $show_debug = false; // Set to false in production
     </script>
 </body>
 </html>
+
 <?php ob_end_flush(); ?>
