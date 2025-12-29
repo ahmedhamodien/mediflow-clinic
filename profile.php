@@ -2,10 +2,11 @@
 session_start();
 
 // Database connection configuration
-$host = 'localhost';
-$username = 'root';
-$password = '';
-$database = 'clinic_system';
+define('DB_HOST', 'interchange.proxy.rlwy.net');
+define('DB_USER', 'root');
+define('DB_PASS', 'tfjmUwdPwmljUBeGyqkIXukwLdJDYnNK');
+define('DB_NAME', 'railway');
+
 
 // Create connection
 $conn = new mysqli($host, $username, $password, $database);
@@ -657,3 +658,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['change_password'])) {
 </html>
 
 <?php $conn->close(); ?>
+
