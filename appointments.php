@@ -3,9 +3,9 @@
 session_start();
 
 // Include database connection
-require_once 'config/database.php';
+require_once 'database.php';
 // include helper functions
-require_once 'includes/functions.php';
+require_once 'functions.php';
 
 // Check if user is logged in and is admin
 if (!isset($_SESSION['user_id']) || $_SESSION['user_type'] != 'admin') {
@@ -352,3 +352,4 @@ if ($filter != 'all') {
 </body>
 
 </html>
+
