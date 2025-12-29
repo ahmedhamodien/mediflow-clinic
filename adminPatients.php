@@ -11,7 +11,7 @@ if (!isset($_SESSION['user_id']) || $_SESSION['user_type'] !== 'admin') {
 }
 
 // Include database connection
-require_once 'config/database.php';
+require_once 'database.php';
 
 // Initialize variables
 $search = '';
@@ -133,7 +133,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['activate_patient'])) {
     <title>Patient Directory - Admin Panel</title>
     
     <!-- Admin Patients CSS -->
-    <link rel="stylesheet" href="CSS/adminPatients.css">
+    <link rel="stylesheet" href="adminPatients.css">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -471,7 +471,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['activate_patient'])) {
 </div>
 
 <!-- Include JavaScript -->
-<script src="JS/adminPatients.js"></script>
+<script src="adminPatients.js"></script>
 </body>
 </html>
 
@@ -483,4 +483,5 @@ function calculateAge($birthDate) {
     $age = $today->diff($birthDate)->y;
     return $age;
 }
+
 ?>
