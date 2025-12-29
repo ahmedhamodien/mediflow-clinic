@@ -11,8 +11,8 @@ if (!isset($_SESSION['user_id']) || $_SESSION['user_type'] != 'doctor') {
 }
 
 // Include database connection
-require_once 'config/database.php';
-require_once 'includes/functions.php';
+require_once 'database.php';
+require_once 'functions.php';
 
 // Initialize variables
 $doctor_id = getDoctorId($_SESSION['user_id']);
@@ -258,7 +258,7 @@ function getDoctorId($user_id) {
     <title>My Patients - MediFlow Clinic</title>
     
     <!-- Patient Records CSS -->
-    <link rel="stylesheet" href="CSS/patient_records.css">
+    <link rel="stylesheet" href="spatient_records.css">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -932,6 +932,7 @@ function getDoctorId($user_id) {
     JAVASCRIPT
     ============================================ -->
     <!-- Patient Records JavaScript -->
-    <script src="JS/patient_records.js"></script>
+    <script src="patient_records.js"></script>
 </body>
+
 </html>
