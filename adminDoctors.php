@@ -9,7 +9,7 @@ if (!isset($_SESSION['user_id']) || $_SESSION['user_type'] !== 'admin') {
 }
 
 // Include database connection
-require_once 'config/database.php';
+require_once 'database.php';
 
 // Initialize variables
 $search = '';
@@ -175,7 +175,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['activate_doctor'])) {
     <title>Doctors Management - Admin Panel</title>
     
     <!-- Admin Doctors CSS -->
-    <link rel="stylesheet" href="CSS/adminDoctors.css">
+    <link rel="stylesheet" href="adminDoctors.css">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -587,7 +587,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['activate_doctor'])) {
 </div>
 
 <!-- Include JavaScript -->
-<script src="JS/adminDoctors.js"></script>
+<script src="adminDoctors.js"></script>
 </body>
 </html>
 
@@ -617,4 +617,5 @@ function formatDays($days_string) {
     
     return !empty($formatted_days) ? implode(', ', $formatted_days) : 'Not Set';
 }
+
 ?>
