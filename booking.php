@@ -3,7 +3,7 @@
 session_start();
 
 // Include database connection
-require_once 'config/database.php';
+require_once 'database.php';
 
 // Check if user is logged in
 $isLoggedIn = isset($_SESSION['user_id']);
@@ -697,6 +697,7 @@ if (isset($_GET['ajax']) && $_GET['ajax'] == 'getTimeSlots') {
     </footer>
 
     <!-- JavaScript -->
-    <script src="JS/booking.js"></script>
+    <script src="booking.js"></script>
 </body>
+
 </html>
