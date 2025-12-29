@@ -14,7 +14,7 @@ $userName = $isLoggedIn ? $_SESSION['user_name'] : '';
     <title>Home - MediFlow Clinic</title>
     
     <!-- Home Page CSS -->
-    <link rel="stylesheet" href="CSS/index.css">
+    <link rel="stylesheet" href="index.css">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -346,6 +346,7 @@ $userName = $isLoggedIn ? $_SESSION['user_name'] : '';
     </footer>
 
     <!-- javascript connection-->
-    <script src="JS/index.js"></script>
+    <script src="index.js"></script>
 </body>
+
 </html>
