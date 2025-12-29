@@ -3,8 +3,8 @@
 session_start();
 
 // Include database connection
-require_once 'config/database.php';
-require_once 'includes/functions.php';
+require_once 'database.php';
+require_once 'functions.php';
 
 // Initialize variables
 $full_name = $email = $phone = $user_type = '';
@@ -124,7 +124,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <title>Register - MediFlow Clinic</title>
     
     <!-- Register Page CSS -->
-    <link rel="stylesheet" href="CSS/register.css">
+    <link rel="stylesheet" href="register.css">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -367,9 +367,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <!-- JS file connection -->
     <!-- Register Page JavaScript -->
-    <script src="JS/register.js"></script>
+    <script src="register.js"></script>
     
     <!-- Font Awesome for icons -->
     <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
 </body>
+
 </html>
