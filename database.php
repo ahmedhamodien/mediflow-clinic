@@ -1,9 +1,9 @@
 <?php
 // Database configuration
-define('DB_HOST', 'localhost');
+define('DB_HOST', 'interchange.proxy.rlwy.net');
 define('DB_USER', 'root');
-define('DB_PASS', '');
-define('DB_NAME', 'clinic_system');
+define('DB_PASS', 'tfjmUwdPwmljUBeGyqkIXukwLdJDYnNK');
+define('DB_NAME', 'railway');
 
 // Create connection
 $conn = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
@@ -22,4 +22,5 @@ date_default_timezone_set('Africa/Cairo');
 // Error reporting (only for development)
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
+
 ?>
