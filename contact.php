@@ -3,7 +3,7 @@
 session_start();
 
 // Include database connection
-require_once 'config/database.php';
+require_once 'database.php';
 
 // Check if user is logged in
 $isLoggedIn = isset($_SESSION['user_id']);
@@ -300,7 +300,7 @@ if (isset($_GET['ajax']) && $_GET['ajax'] == 'getTimeSlots') {
     <title>Book Appointment - MediFlow Clinic</title>
     
     <!-- Styles -->
-    <link rel="stylesheet" href="CSS/booking.css">
+    <link rel="stylesheet" href="booking.css">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -586,6 +586,7 @@ if (isset($_GET['ajax']) && $_GET['ajax'] == 'getTimeSlots') {
     </footer>
 
     <!-- JavaScript -->
-    <script src="JS/booking.js"></script>
+    <script src="booking.js"></script>
 </body>
+
 </html>
