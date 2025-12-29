@@ -104,7 +104,7 @@ $userName = $isLoggedIn ? $_SESSION['user_name'] : '';
                     
                     <div class="hero-image">
                         <div class="image-wrapper">
-                            <img src="images/index.jpeg" alt="Modern Clinic">
+                            <img src="index.jpeg" alt="Modern Clinic">
                             <div class="image-badge">
                                 <i class="fas fa-shield-alt"></i>
                                 <span>Safe & Hygienic</span>
@@ -350,3 +350,4 @@ $userName = $isLoggedIn ? $_SESSION['user_name'] : '';
 </body>
 
 </html>
+
